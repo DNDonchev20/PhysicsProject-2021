@@ -1,0 +1,7 @@
+﻿  PhysicsTech.cpp
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech.cpp(61,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech.cpp(107,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech.cpp(120,70): warning C4305: 'initializing': truncation from 'double' to 'float'
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech.cpp(131,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech.cpp(133,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  PhysicsTech.vcxproj -> H:\Git Hub\PhysicsProject-2021\PhysicsTech\x64\Debug\PhysicsTech.exe
