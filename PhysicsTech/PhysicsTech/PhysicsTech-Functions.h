@@ -1,6 +1,6 @@
 #pragma once
 
-double CalculateMass(float F, double acceleration);
+float CalculateMass(float F, float acceleration);
 
 float CalculateVolume(float radius, int heightFlask);
 
