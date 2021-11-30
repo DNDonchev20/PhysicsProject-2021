@@ -30,8 +30,8 @@ int main()
 		{
 			forceOfArchimedes();
 		}
-		system("PAUSE"); //караме потребителя да натисне бутон, за да продължи нататък
-		system("CLS"); //изчистваме всичко по екрана до момента
+		system("PAUSE"); 
+		system("CLS"); 
 		printMenu();
 		cin >> choice;
 	} while (choice != "End");
