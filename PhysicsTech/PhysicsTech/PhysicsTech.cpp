@@ -23,10 +23,12 @@ int main()
 	printMenu();
 	string choice;
 	cin >> choice;
+	
 	do {
 		if (choice == "1")
 		{
 			secondPrincipleOfMechanicsCheck();
+			
 		}
 		else if (choice == "2") {
 			accelerationsOfPlanets();
