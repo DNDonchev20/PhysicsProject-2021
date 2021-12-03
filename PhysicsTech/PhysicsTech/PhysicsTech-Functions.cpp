@@ -87,15 +87,18 @@ void forceOfArchimedes()
 	float heightOfWater;
 
 	cout << "The height of the poured water in the flask is: ";
+
 	cin >> heightOfWater;
 
 
 	volumeOfWater = 3.14f * radius * radius * heightOfWater;
+
 	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
 
 	printMenuForShapes();
 
 	string shapeSelector;
+
 	cin >> shapeSelector;
 
 	float radiusShapes = 0, aCube = 0;
@@ -117,6 +120,7 @@ void forceOfArchimedes()
 //Find the average of the three times
 float calculateTimeAverage(float times[], int count) {
 	float timeSum = 0;
+
 	for (int i = 0; i < count; i++)
 	{
 		timeSum += times[i];
@@ -126,7 +130,8 @@ float calculateTimeAverage(float times[], int count) {
 }
 
 //Find the acceleration according to the formula
-float CalculateAcceleration(float distance, float timeAverage) {
+float CalculateAcceleration(float distance, float timeAverage) 
+{
 	return (2 * distance) / (timeAverage * timeAverage);
 }
 
@@ -137,8 +142,10 @@ float CalculateMass(float F, float acceleration)
 }
 
 //Ånter the times (which are three for accuracy)
-float* readTimes(int count) {
+float* readTimes(int count) 
+{
 	float* times = new float[count];
+
 	for (int i = 0; i < count; i++)
 	{
 		switch (i)
@@ -178,11 +185,13 @@ void ånterÒheÌass()
 void secondPrincipleOfMechanicsCheck()
 {
 	float distance;
+
 	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
 	cin >> distance;
 	cout << endl;
 
 	ånterÒheÌass();
+
 	cout << "Total mass is: ";
 	float AllM = mHolder + mTrolley;
 	cout << AllM << endl;
@@ -192,12 +201,14 @@ void secondPrincipleOfMechanicsCheck()
 	{
 		cout << "The holder is too heavy to replace it with another" << endl;
 		cout << "Try again" << endl;
+
 		ånterÒheÌass();
 	}
 	else
 	{
 		cout << "Strength of gravity is equal to the: ";
-		F = mHolder * 10; // g = 10
+		F = mHolder * 10;	// g = 10
+
 		cout << F << endl;
 	}
 
@@ -206,6 +217,7 @@ void secondPrincipleOfMechanicsCheck()
 	float* times = readTimes(count);
 
 	float timeAverage = calculateTimeAverage(times, 3);
+
 	cout << "Average time: " << timeAverage << endl;
 
 	//Find the acceleration according to the formula
@@ -217,6 +229,7 @@ void secondPrincipleOfMechanicsCheck()
 	if (M > 1)
 	{
 		cout << "It's too heavy a body. Change it to a lighter one." << endl;
+
 		secondPrincipleOfMechanicsCheck();
 		cout << endl;
 	}
@@ -230,6 +243,7 @@ void secondPrincipleOfMechanicsCheck()
 void equilibriumMovementAtInclinedPlane()
 {
 	float distance;
+
 	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
 	cin >> distance;
 	cout << endl;
