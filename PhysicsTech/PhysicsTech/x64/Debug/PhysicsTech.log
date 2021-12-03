@@ -1,5 +1,5 @@
 ﻿  PhysicsTech-Functions.cpp
-  PhysicsTech.cpp
-  Generating Code...
-  LINK : H:\Git Hub\PhysicsProject-2021\PhysicsTech\x64\Debug\PhysicsTech.exe not found or not built by the last incremental link; performing full link
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(18,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(53,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+H:\Git Hub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(60): warning C4715: 'enterTheShapes': not all control paths return a value
   PhysicsTech.vcxproj -> H:\Git Hub\PhysicsProject-2021\PhysicsTech\x64\Debug\PhysicsTech.exe

@@ -3,15 +3,14 @@
 #include <iomanip>
 #include <cstring>
 #include <conio.h>
-#include "PhysicsTech-Functions.h"
 
 using namespace std;
 
+//Consider the volume of the collapse
 float CalculateVolume(float radius, int heightFlask)
 {
 	return 3.14f * radius * radius * heightFlask;
 }
-
 
 //choose what shape the body is (only the ideal cases are taken) - cube, sphere, cylinder
 float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, float volumeShape, float heightCylinder)
@@ -60,16 +59,6 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 
 }
 
-//Create menu for the shapes in the Archimedes task
-void printMenuShapes()
-{
-	cout << setfill('-') << setw(10) << " " << endl;
-	cout << "1. Cube" << endl;
-	cout << "2. Sphere" << endl;
-	cout << "3. Cylinder" << endl;
-	cout << setfill('-') << setw(10) << " " << endl;
-}
-
 void forceOfArchimedes()
 {
 	//V = pow(a, 3) - cube
@@ -96,7 +85,12 @@ void forceOfArchimedes()
 	volumeOfWater = 3.14f * radius * radius * heightOfWater;
 	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
 
-	printMenuShapes();
+	//Create menu for the shapes in the Archimedes task
+	cout << setfill('-') << setw(10) << " " << endl;
+	cout << "1. Cube" << endl;
+	cout << "2. Sphere" << endl;
+	cout << "3. Cylinder" << endl;
+	cout << setfill('-') << setw(10) << " " << endl;
 
 	string shapeSelector;
 	cin >> shapeSelector;
@@ -107,13 +101,35 @@ void forceOfArchimedes()
 
 	enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
 
-	float densitÎfLiquids;
+	float densitÎfLiquids = 1000;
 
 	//make if else for different liquids
 
 	float Fa = densitÎfLiquids * volumeShape * 10;
 	cout << Fa;
 
+}
+
+//Find the average of the three times
+float calculateTimeAverage(float times[], int count) {
+	float timeSum = 0;
+	for (int i = 0; i < count; i++)
+	{
+		timeSum += times[i];
+	}
+
+	return timeSum / count;
+}
+
+//Find the acceleration according to the formula
+float CalculateAcceleration(float distance, float timeAverage) {
+	return (2 * distance) / (timeAverage * timeAverage);
+}
+
+
+float CalculateMass(float F, float acceleration)
+{
+	return F / acceleration;
 }
 
 //Ånter the times (which are three for accuracy)
@@ -140,25 +156,6 @@ float* readTimes(int count) {
 	return times;
 }
 
-float CalculateAcceleration(float distance, float timeAverage) {
-	return (2 * distance) / (timeAverage * timeAverage);
-}
-
-float CalculateMass(float F, float acceleration)
-{
-	return F / acceleration;
-}
-
-float* readTimes(int count) {
-	float* times = new float[count];
-	for (int i = 0; i < count; i++)
-	{
-		cout << "Times " << i + 1 << ": ";
-		cin >> times[i];
-	}
-
-	return times;
-}
 
 float mHolder, mTrolley;
 
@@ -229,25 +226,21 @@ void secondPrincipleOfMechanicsCheck()
 void slopingPlane()
 {
 	float distance;
-
 	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
-
 	cin >> distance;
-
 	cout << endl;
-
 
 	int count = 3;
 	float* times = readTimes(count);
 
-	//Find the average aretmic of the times (which are 3)
+
 	float timeAverage = calculateTimeAverage(times, 3);
 
 	cout << "Average time: " << timeAverage << endl;
 
 	float  acceleration = CalculateAcceleration(distance, timeAverage);
 
-	cout << fixed << setprecision(2) << "Accleration is: " << acceleration;
+	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 }
 
 void accelerationsOfPlanets()
@@ -261,7 +254,7 @@ void accelerationsOfPlanets()
 	float arr[8] = { 3.59f, 8.77f, 9.81f, 3.77f, 25.95f, 11.08f, 10.67f, 14.07f };
 	float swap;
 
-	//compare and sort the accelerations//
+	//compare and sort the accelerations
 
 	for (int i = 0; i < 8; i++)
 	{
@@ -313,7 +306,9 @@ void accelerationsOfPlanets()
 	}
 }
 
-void printMenu() {
+//Create menu
+void printMenu()
+{
 	cout << setfill('-') << setw(30) << " " << endl;
 	cout << "1. Second principle of mechanics" << endl;
 	cout << "2. Acceleration of planets" << endl;
@@ -321,3 +316,6 @@ void printMenu() {
 	cout << "4. Force of Archimedes" << endl;
 	cout << setfill('-') << setw(30) << " " << endl;
 }
+
+
+
