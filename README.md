@@ -38,7 +38,6 @@ GitHub profile: [SERedanski20](https://github.com/SERedanski20)
 - <img src="https://media.discordapp.net/attachments/815253581149896790/818136011359518780/kisspng-microsoft-powerpoint-computer-software-microsoft-o-5b3b3927c75c49.3318087715306079118166-rem.png" width="20"> PowerPoint
 - <img src="https://media.discordapp.net/attachments/815253581149896790/818134368848969728/1043px-Microsoft_Excel_2013_logo.svg_.png?width=551&height=541" width="20"> Excel
 - 👩🏻‍💻 Programing languages C++, HTML, JS, CSS
-- <img src="https://media.discordapp.net/attachments/898600291795099726/906659560226447410/image-removebg-preview_36.png" width="20"> Azure
 
 
 ---
