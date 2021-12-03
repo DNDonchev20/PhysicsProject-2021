@@ -17,6 +17,7 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 {
 	const float pi = 3.14;
 	//cube, sphere, cylinder
+	//menu set up
 	if (shapeSelector == "1")
 	{
 		cout << "Enter the cube side: ";
@@ -118,6 +119,7 @@ void forceOfArchimedes()
 }
 
 //Find the average of the three times
+//declarating new function for calculation
 float calculateTimeAverage(float times[], int count) {
 	float timeSum = 0;
 
@@ -130,18 +132,20 @@ float calculateTimeAverage(float times[], int count) {
 }
 
 //Find the acceleration according to the formula
+//declarating new function for calculation
 float CalculateAcceleration(float distance, float timeAverage) 
 {
 	return (2 * distance) / (timeAverage * timeAverage);
 }
 
-
+//declarating new function for calculation
 float CalculateMass(float F, float acceleration)
 {
 	return F / acceleration;
 }
 
 //Ånter the times (which are three for accuracy)
+//declarating new function for calculation
 float* readTimes(int count) 
 {
 	float* times = new float[count];
@@ -181,7 +185,7 @@ void ånterÒheÌass()
 	cin >> mTrolley;
 	cout << endl;
 }
-
+//declarating new function  about the second princip of the mechanics
 void secondPrincipleOfMechanicsCheck()
 {
 	float distance;
@@ -239,7 +243,7 @@ void secondPrincipleOfMechanicsCheck()
 	}
 
 }
-
+//declarating new function  about the distance between the planets
 void equilibriumMovementAtInclinedPlane()
 {
 	float distance;
@@ -262,7 +266,7 @@ void equilibriumMovementAtInclinedPlane()
 }
 
 
-
+//declarating new function  about the distance between the planets + calculation
 void accelerationsOfPlanets()
 {
 	/*Mercury = 3.59; Venus = 8.87;
@@ -326,7 +330,7 @@ void accelerationsOfPlanets()
 	}
 }
 
-//Create menu
+//Create function for menu
 void printMenu()
 {
 	cout << setfill('-') << setw(70) << " " << endl;
