@@ -11,8 +11,8 @@ Application for calculation of various physical quantities and laws.
 ---------------------------------------------- --------------------------------------
 You can choose from 4 different options:
 1. Second principle of mechanics
-2. Acceleration OF planets
-3. Sloping Plane
+2. Acceleration of planets
+3. Equilibrium movement at inclined plane
 4. Force of Archimedes
 ---------------------------------------------- --------------------------------------
 The subject you want to run starts by typing the number which is preceded.
