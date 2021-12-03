@@ -247,6 +247,8 @@ void slopingPlane()
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 }
 
+
+
 void accelerationsOfPlanets()
 {
 	/*Mercury = 3.59; Venus = 8.87;
@@ -255,7 +257,7 @@ void accelerationsOfPlanets()
 	Uranus = 10.67; Neptume = 14.07*/
 
 
-	float arr[8] = { 3.59f, 8.77f, 9.81f, 3.77f, 25.95f, 11.08f, 10.67f, 14.07f };
+	float arr[] = { 3.59, 8.77, 9.81, 3.77, 25.95, 11.08, 10.67, 14.07 };
 	float swap;
 
 	//compare and sort the accelerations
