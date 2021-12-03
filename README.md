@@ -44,3 +44,17 @@ A student who wants to learn programming and web development - DNDonchev20
 Изображение
 GitHub
 SERedanski20 - Overview
+Hi, I am from Burgas, Bulgaria. SERedanski20 has 2 repositories available. Follow their code on GitHub.
+Изображение
+## <img src="https://www.ocs-consulting.nl/wp-content/uploads/2018/02/ocs-consulting-technology-icon.png" width="40"> Used technologies
+- <img src="https://media.discordapp.net/attachments/815253581149896790/818134527842582578/Visual_Studio_Icon_2019.svg.png?width=541&height=541" width="20"> Visual studio
+-  <img src="https://media.discordapp.net/attachments/815253581149896790/818133539903111188/Microsoft_Word_logo.png" width="20"> Word
+- <img src="https://media.discordapp.net/attachments/815253581149896790/818136011359518780/kisspng-microsoft-powerpoint-computer-software-microsoft-o-5b3b3927c75c49.3318087715306079118166-rem.png" width="20"> PowerPoint
+- <img src="https://media.discordapp.net/attachments/815253581149896790/818134368848969728/1043px-Microsoft_Excel_2013_logo.svg_.png?width=551&height=541" width="20"> Excel
+- 👩🏻‍💻 Programing languages C++, HTML, JS, CSS
+- <img src="https://media.discordapp.net/attachments/898600291795099726/906659560226447410/image-removebg-preview_36.png" width="20"> Azure
+
+
+---
+
+# 🎉 And do not forget, do not use it to cheat on the tests! (Or at least try not to get caught)
