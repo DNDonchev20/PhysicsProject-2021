@@ -22,7 +22,7 @@ The subject you want to run starts by typing the number which is preceded.
  ## Team    <a name = "team">PhysicsTech</a>
 1. Alexander Peev -  [ADPeev20](https://github.com/ADPeev20)
 2. Trani Tranev -  [TSTranev20](https://github.com/TSTranev20)
-3. David Docnhev -  [DNDonchev20](https://github.com/DNDonchev20)
+3. David Donchev -  [DNDonchev20](https://github.com/DNDonchev20)
 4. Simeon Redanski - [SERedanski20](https://github.com/SERedanski20)
 
  ---
