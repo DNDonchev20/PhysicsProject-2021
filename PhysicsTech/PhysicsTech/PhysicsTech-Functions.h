@@ -16,8 +16,6 @@ float* readTimes(int count);
 
 void secondPrincipleOfMechanicsCheck();
 
-void slopingPlane();
-
 void accelerationsOfPlanets();
 
 void printMenu();
@@ -33,3 +31,15 @@ float calculateTimeAverage(float times[], int count);
 float CalculateAcceleration(float distance, float timeAverage);
 
 float CalculateMass(float F, float acceleration);
+
+void accelerationsOfPlanets();
+
+void equilibriumMovementAtInclinedPlane();
+
+void secondPrincipleOfMechanicsCheck();
+
+void Ânter“heÃass();
+
+void forceOfArchimedes();
+
+void printMenuForShapes();

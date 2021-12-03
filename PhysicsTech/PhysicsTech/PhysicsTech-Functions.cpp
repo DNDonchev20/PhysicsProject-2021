@@ -227,7 +227,7 @@ void secondPrincipleOfMechanicsCheck()
 
 }
 
-void slopingPlane()
+void equilibriumMovementAtInclinedPlane()
 {
 	float distance;
 	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
