@@ -15,11 +15,11 @@ float CalculateVolume(float radius, int heightFlask)
 //choose what shape the body is (only the ideal cases are taken) - cube, sphere, cylinder
 float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, float volumeShape, float heightCylinder)
 {
-	const int pi = 3.14;
+	const float pi = 3.14;
 	//cube, sphere, cylinder
-	if (shapeSelector == "cube")
+	if (shapeSelector == "1")
 	{
-		cout << "Enter the country of cube: ";
+		cout << "Enter the cube side: ";
 		cin >> aCube;
 		cout << endl;
 
@@ -27,9 +27,8 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 		cout << "Volume of the cube is: ";
 
 		return volumeShape;
-		cout << "cm3" << endl;
 	}
-	else if (shapeSelector == "sphere")
+	else if (shapeSelector == "2")
 	{
 		cout << "Enter the radius of sphere";
 		cin >> radiusShapes;
@@ -38,10 +37,9 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 		volumeShape = 4 / 3 * pi * radiusShapes * radiusShapes * radiusShapes;
 		cout << "Volume of the sphere is: ";
 
-		return volumeShape;
-		cout << "cm3" << endl;
+		return volumeShape;	
 	}
-	else if (shapeSelector == "cylinder")
+	else if (shapeSelector == "3")
 	{
 		cout << "Enter the radius of cylinder: ";
 		cin >> radiusShapes;
@@ -54,10 +52,20 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 		cout << "Volume of the sphere is: ";
 
 		return volumeShape;
-		cout << "cm3" << endl;
 	}
 
 }
+
+//Create menu for the shapes in the Archimedes task
+void printMenuForShapes()
+{
+	cout << setfill('-') << setw(15) << " " << endl;
+	cout << "1. Cube" << endl;
+	cout << "2. Sphere" << endl;
+	cout << "3. Cylinder" << endl;
+	cout << setfill('-') << setw(15) << " " << endl;
+}
+
 
 void forceOfArchimedes()
 {
@@ -85,12 +93,7 @@ void forceOfArchimedes()
 	volumeOfWater = 3.14f * radius * radius * heightOfWater;
 	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
 
-	//Create menu for the shapes in the Archimedes task
-	cout << setfill('-') << setw(10) << " " << endl;
-	cout << "1. Cube" << endl;
-	cout << "2. Sphere" << endl;
-	cout << "3. Cylinder" << endl;
-	cout << setfill('-') << setw(10) << " " << endl;
+	printMenuForShapes();
 
 	string shapeSelector;
 	cin >> shapeSelector;
@@ -99,14 +102,15 @@ void forceOfArchimedes()
 	float volumeShape = 0;
 	float heightCylinder = 0;
 
-	enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
 
-	float densitÎfLiquids = 1000;
+	
+	/*float densitÎfLiquids;
 
-	//make if else for different liquids
+	make if else for different liquids
 
 	float Fa = densitÎfLiquids * volumeShape * 10;
-	cout << Fa;
+	cout << Fa;*/
 
 }
 
@@ -309,12 +313,10 @@ void accelerationsOfPlanets()
 //Create menu
 void printMenu()
 {
-	cout << setfill('-') << setw(30) << " " << endl;
-	cout << "1. Second principle of mechanics" << endl;
-	cout << "2. Acceleration of planets" << endl;
-	cout << "3. Sloping plane" << endl;
-	cout << "4. Force of Archimedes" << endl;
-	cout << setfill('-') << setw(30) << " " << endl;
+	cout << setfill('-') << setw(70) << " " << endl;
+	cout << "1. Second principle of mechanics	2. Acceleration of planets" << endl;
+	cout << "3. Sloping plane			4. Force of Archimedes" << endl;
+	cout << setfill('-') << setw(70) << " " << endl;
 }
 
 
