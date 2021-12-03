@@ -33,7 +33,7 @@ int main()
 		}
 		else if (choice == "3")
 		{
-			slopingPlane();
+			equilibriumMovementAtInclinedPlane();
 		}
 		else if (choice == "4")
 		{
