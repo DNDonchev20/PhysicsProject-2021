@@ -30,21 +30,7 @@ GitHub profile: [DNDonchev20](https://github.com/DNDonchev20)
 GitHub profile: [SERedanski20](https://github.com/SERedanski20)
 
  ---
-GitHub
-ADPeev20 - Overview
-ADPeev20 has one repository available. Follow their code on GitHub.
-Изображение
-GitHub
-TSTranev20 - Overview
-TSTranev20 has 2 repositories available. Follow their code on GitHub.
-Изображение
-GitHub
-DNDonchev20 - Overview
-A student who wants to learn programming and web development - DNDonchev20
-Изображение
-GitHub
-SERedanski20 - Overview
-Hi, I am from Burgas, Bulgaria. SERedanski20 has 2 repositories available. Follow their code on GitHub.
+
 Изображение
 ## <img src="https://www.ocs-consulting.nl/wp-content/uploads/2018/02/ocs-consulting-technology-icon.png" width="40"> Used technologies
 - <img src="https://media.discordapp.net/attachments/815253581149896790/818134527842582578/Visual_Studio_Icon_2019.svg.png?width=541&height=541" width="20"> Visual studio
