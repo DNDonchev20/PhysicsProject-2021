@@ -12,12 +12,72 @@ float CalculateVolume(float radius, int heightFlask)
 	return 3.14f * radius * radius * heightFlask;
 }
 
+
+//choose what shape the body is (only the ideal cases are taken) - cube, sphere, cylinder
+float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, float volumeShape, float heightCylinder)
+{
+	const int pi = 3.14;
+	//cube, sphere, cylinder
+	if (shapeSelector == "cube")
+	{
+		cout << "Enter the country of cube: ";
+		cin >> aCube;
+		cout << endl;
+
+		volumeShape = aCube * aCube * aCube;
+		cout << "Volume of the cube is: ";
+
+		return volumeShape;
+		cout << "cm3" << endl;
+	}
+	else if (shapeSelector == "sphere")
+	{
+		cout << "Enter the radius of sphere";
+		cin >> radiusShapes;
+		cout << endl;
+
+		volumeShape = 4 / 3 * pi * radiusShapes * radiusShapes * radiusShapes;
+		cout << "Volume of the sphere is: ";
+
+		return volumeShape;
+		cout << "cm3" << endl;
+	}
+	else if (shapeSelector == "cylinder")
+	{
+		cout << "Enter the radius of cylinder: ";
+		cin >> radiusShapes;
+
+		cout << "Enter the height of cylinder: ";
+		cin >> heightCylinder;
+		cout << endl;
+
+		volumeShape = pi * heightCylinder * pow(radiusShapes, 2);
+		cout << "Volume of the sphere is: ";
+
+		return volumeShape;
+		cout << "cm3" << endl;
+	}
+
+}
+
+//Create menu for the shapes in the Archimedes task
+void printMenuShapes()
+{
+	cout << setfill('-') << setw(10) << " " << endl;
+	cout << "1. Cube" << endl;
+	cout << "2. Sphere" << endl;
+	cout << "3. Cylinder" << endl;
+	cout << setfill('-') << setw(10) << " " << endl;
+}
+
 void forceOfArchimedes()
 {
 	//V = pow(a, 3) - cube
 	//V = 4 / 3 * 3.14 * pow(r, 3) - sphere
 	//V = 3.14 * pow(r, 2) * h - cylinder
-	//“he radius of the flask = 4.5 cm and height = 14 cm(these are data of a sample flask)
+
+
+	//Radius of the flask = 4.5 cm and height = 14 cm(these are data of a sample flask)
 	float radius = 4.5;
 	int heightFlask = 14;
 
@@ -36,16 +96,48 @@ void forceOfArchimedes()
 	volumeOfWater = 3.14f * radius * radius * heightOfWater;
 	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
 
+	printMenuShapes();
+
+	string shapeSelector;
+	cin >> shapeSelector;
+
+	float radiusShapes = 0, aCube = 0;
+	float volumeShape = 0;
+	float heightCylinder = 0;
+
+	enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+
+	float densitŒfLiquids;
+
+	//make if else for different liquids
+
+	float Fa = densitŒfLiquids * volumeShape * 10;
+	cout << Fa;
+
 }
 
-float calculateTimeAverage(float times[], int count) {
-	float timeSum = 0;
+//≈nter the times (which are three for accuracy)
+float* readTimes(int count) {
+	float* times = new float[count];
 	for (int i = 0; i < count; i++)
 	{
-		timeSum += times[i];
+		switch (i)
+		{
+		case 0:
+			cout << "First time: ";
+			break;
+		case 1:
+			cout << "Second time: ";
+			break;
+		case 2:
+			cout << "Third time: ";
+			break;
+		}
+
+		cin >> times[i];
 	}
 
-	return timeSum / count;
+	return times;
 }
 
 float CalculateAcceleration(float distance, float timeAverage) {
@@ -68,16 +160,11 @@ float* readTimes(int count) {
 	return times;
 }
 
-void secondPrincipleOfMechanicsCheck()
+float mHolder, mTrolley;
+
+//Enter the mass of the holder and troley
+void Ânter“heÃass()
 {
-
-	float distance;
-	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
-	cin >> distance;
-	cout << endl;
-
-
-	float mHolder, mTrolley;
 	cout << "Total mass of the holder: ";
 	cin >> mHolder;
 	cout << endl;
@@ -85,14 +172,34 @@ void secondPrincipleOfMechanicsCheck()
 	cout << "Total mass of the trolley: ";
 	cin >> mTrolley;
 	cout << endl;
+}
 
+void secondPrincipleOfMechanicsCheck()
+{
+	float distance;
+	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
+	cin >> distance;
+	cout << endl;
+
+	Ânter“heÃass();
 	cout << "Total mass is: ";
 	float AllM = mHolder + mTrolley;
 	cout << AllM << endl;
 
-	cout << "Strength of gravity is equal to the: ";
-	float F = mHolder * 10; // g = 10
-	cout << F << endl;
+	float F = 0;
+	if (mHolder < 0.07)
+	{
+		cout << "The holder is too heavy to replace it with another" << endl;
+		cout << "Try again" << endl;
+		Ânter“heÃass();
+	}
+	else
+	{
+		cout << "Strength of gravity is equal to the: ";
+		F = mHolder * 10; // g = 10
+		cout << F << endl;
+	}
+
 
 	int count = 3;
 	float* times = readTimes(count);
@@ -105,7 +212,18 @@ void secondPrincipleOfMechanicsCheck()
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 
 	float M = CalculateMass(F, acceleration);
-	cout << M;
+
+	if (M > 1)
+	{
+		cout << "It's too heavy a body. Change it to a lighter one." << endl;
+		secondPrincipleOfMechanicsCheck();
+		cout << endl;
+	}
+	else
+	{
+		cout << "The F/a ratio is: " << M << endl;
+	}
+
 }
 
 void slopingPlane()
@@ -202,5 +320,4 @@ void printMenu() {
 	cout << "3. Sloping plane" << endl;
 	cout << "4. Force of Archimedes" << endl;
 	cout << setfill('-') << setw(30) << " " << endl;
-
 }
