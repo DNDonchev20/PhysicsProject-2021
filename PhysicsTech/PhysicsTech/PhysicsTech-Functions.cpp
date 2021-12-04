@@ -39,7 +39,7 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 		volumeShape = 4 / 3 * pi * radiusShapes * radiusShapes * radiusShapes;
 		cout << "Volume of the sphere is: ";
 
-		return volumeShape;	
+		return volumeShape;
 	}
 	else if (shapeSelector == "3")
 	{
@@ -80,8 +80,8 @@ void forceOfArchimedes()
 	float radius = 4.5;
 	int heightFlask = 14;
 
-	float theVolumeÎfÒheFlask = CalculateVolume(radius, heightFlask);
-	cout << "The volume of the flask is: " << theVolumeÎfÒheFlask << "cm3" << endl;
+	float theVolumeOfTheFlask = CalculateVolume(radius, heightFlask);
+	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
 
 	//given the in poured water
 	float volumeOfWater;
@@ -109,12 +109,12 @@ void forceOfArchimedes()
 
 	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
 
-	
-	/*float densitÎfLiquids;
+
+	/*float densitOfLiquids;
 
 	make if else for different liquids
 
-	float Fa = densitÎfLiquids * volumeShape * 10;
+	float Fa = densitOfLiquids * volumeShape * 10;
 	cout << Fa;*/
 
 }
@@ -134,7 +134,7 @@ float calculateTimeAverage(float times[], int count) {
 
 //Find the acceleration according to the formula
 //declarating new function for calculation
-float CalculateAcceleration(float distance, float timeAverage) 
+float CalculateAcceleration(float distance, float timeAverage)
 {
 	return (2 * distance) / (timeAverage * timeAverage);
 }
@@ -145,9 +145,9 @@ float CalculateMass(float F, float acceleration)
 	return F / acceleration;
 }
 
-//Ånter the times (which are three for accuracy)
+//Enter the times (which are three for accuracy)
 //declarating new function for calculation
-float* readTimes(int count) 
+float* readTimes(int count)
 {
 	float* times = new float[count];
 
@@ -175,12 +175,41 @@ float* readTimes(int count)
 
 float mHolder, mTrolley;
 
+void OutputUntilHolder() {
+	system("CLS");
+	PrintLogo();
+	printMenu();
+	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
+	cout << endl;
+}
+
+void OutputUntilTimes() {
+	OutputUntilHolder();
+	cout << "Total mass of the holder: ";
+	cout << mHolder << endl;
+	cout << "Total mass is: ";
+	float AllM = mHolder + mTrolley;
+	cout << AllM << endl;
+	cout << "Strength of gravity is equal to the: ";
+	float F = mHolder * 10;	// g = 10
+
+	cout << F << endl;
+}
+
 //Enter the mass of the holder and troley
-void ånterÒheÌass()
+void EnterTheMass()
 {
 	cout << "Total mass of the holder: ";
 	cin >> mHolder;
 	cout << endl;
+	while (mHolder >= 0.06) {
+		OutputUntilHolder();
+
+		cout << "The holder is too heavy to replace it with another" << endl;
+		cout << "Try again" << endl;
+
+		cin >> mHolder;
+	}
 
 	cout << "Total mass of the trolley: ";
 	cin >> mTrolley;
@@ -200,26 +229,9 @@ void secondPrincipleOfMechanicsCheck()
 	cin >> distance;
 	cout << endl;
 
-	ånterÒheÌass();
+	EnterTheMass();
 
 	float F = 0;
-	
-	while (mHolder >= 0.07)
-	{
-		system("CLS");
-
-		PrintLogo();
-		printMenu();
-
-		cout << endl;
-		cout << "Distance from the starting position of the trolley to the restrictive plates: " << distance << endl;
-		cout << endl;
-
-		cout << "The holder is too heavy to replace it with another" << endl;
-		cout << "Try again" << endl;
-
-		ånterÒheÌass();
-	} 
 
 	cout << "Strength of gravity is equal to the: ";
 	F = mHolder * 10;	// g = 10
@@ -248,7 +260,18 @@ void secondPrincipleOfMechanicsCheck()
 
 		cout << "It's too heavy a body. Change it to a lighter one." << endl;
 
-		secondPrincipleOfMechanicsCheck();
+		OutputUntilTimes();
+		times = readTimes(count);
+
+		float timeAverage = calculateTimeAverage(times, 3);
+
+		cout << "Average time: " << timeAverage << endl;
+
+		//Find the acceleration according to the formula
+		float acceleration = CalculateAcceleration(distance, timeAverage);
+		cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
+
+		M = CalculateMass(F, acceleration);
 		cout << endl;
 	}
 
@@ -356,7 +379,7 @@ void printMenu()
 //Team logo
 void PrintLogo()
 {
-	
+
 	cout << "    ____  __               _              ______          __  " << endl;
 	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
 	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
@@ -365,4 +388,3 @@ void PrintLogo()
 	cout << "            /____/                                            " << endl;
 	cout << endl;
 }
-
