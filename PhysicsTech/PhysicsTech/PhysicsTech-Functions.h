@@ -7,7 +7,7 @@
 
 using namespace std;
 
-float CalculateVolume(float radius, int heightFlask);
+float calculateVolume(float radius, int heightFlask);
 
 float* readTimes(int count);
 
@@ -17,17 +17,15 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 
 float calculateTimeAverage(float times[], int count);
 
-float CalculateAcceleration(float distance, float timeAverage);
+float calculateAcceleration(float distance, float timeAverage);
 
-float CalculateMass(float F, float acceleration);
+float calculateMass(float F, float acceleration);
 
 void accelerationsOfPlanets();
 
 void equilibriumMovementAtInclinedPlane();
 
 void secondPrincipleOfMechanicsCheck();
-
-void Ânter“heÃass();
 
 void forceOfArchimedes();
 
