@@ -312,7 +312,7 @@ void accelerationsOfPlanets()
 	Uranus = 10.67; Neptume = 14.07*/
 
 
-	float arr[] = { 3.59, 8.77, 9.81, 3.77, 25.95, 11.08, 10.67, 14.07 };
+	float arr[9] = { 3.59, 8.77, 9.81, 3.77, 25.95, 11.08, 10.67, 14.07, 25.95 };
 	float swap;
 
 	//compare and sort the accelerations
@@ -340,31 +340,161 @@ void accelerationsOfPlanets()
 
 	for (int i = 0; i < 8; i++)
 	{
-		cout << i + 1 << ". " << arr[i] << endl;
+		switch (i)
+		{
+		case 0:
+			cout << "Mercury = ";
+			break;
+
+		case 1:
+			cout << "Mars = ";
+			break;
+
+		case 2:
+			cout << "Venus = ";
+			break;
+
+		case 3:
+			cout << "Earth = ";
+			break;
+
+		case 4:
+			cout << "Uranus = ";
+			break;
+
+		case 5:
+			cout << "Saturn = ";
+			break;
+
+		case 6:
+			cout << "Neptume = ";
+			break;
+			
+		case 7:
+			cout << "Jupiter = ";
+
+		}
+
+		cout << arr[i] << endl;
 	}
 
 	int time;
+
+	cout << endl;
+	cout << "Time for which the body falls free is: ";
 	cin >> time;
+	cout << endl;
+
+	float s;
+
+	cout << endl;
+	cout << setfill('-') << setw(60) << " " << endl;
+	cout << endl;
+
+	cout << "Text which write down is for distance(s) on different planets: " << endl;
+	cout << endl;
+
 	for (int i = 0; i < 8; i++)
 	{
-		cout << "V = " << arr[i] * time << "m/s" << endl;
+		switch (i)
+		{
+		case 0:
+			cout << "Distance on Mercury for " << time << " seconds is: ";
+			break;
+
+		case 1:
+			cout << "Distance on Mars for " << time << " seconds is: ";
+			break;
+
+		case 2:
+			cout << "Distance on Venus for " << time << " seconds is: ";
+			break;
+
+		case 3:
+			cout << "Distance on Earth for " << time << " seconds is: ";
+			break;
+
+		case 4:
+			cout << "Distance on Uranus for " << time << " seconds is: ";
+			break;
+
+		case 5:
+			cout << "Distance on Saturn for " << time << " seconds is: ";
+			break;
+
+		case 6:
+			cout << "Distance on Neptume for " << time << " seconds is: ";
+			break;
+
+		case 7:
+			cout << "Distance on Jupiter for " << time << " seconds is: ";
+
+		}
+
+		s = (arr[i] * time * time) / 2;
+		if (s >= 1000)
+		{
+			s /= 1000;
+			cout << fixed << setprecision(2) << s << "km" << endl;
+		}
+		else {
+			cout << fixed << setprecision(2) << s << "m" << endl;
+		}
 	}
 
 	cout << endl;
-	float s;
+	cout << setfill('-') << setw(60) << " " << endl;
+	cout << endl;
+
+	int speed;
+	
+	cout << "Text which is write down is for speed(v) on different planets: " << endl;
+	cout << endl;
 
 	for (int i = 0; i < 8; i++)
 	{
-		s = (arr[i] * time * time) / 2;
-		if (s >= 100)
+		switch (i)
 		{
-			s /= 100;
-			cout << "S = " << fixed << setprecision(2) << s << "km" << endl;
+		case 0:
+			cout << "Speed on Mercury for " << time << " seconds is: ";
+			break;
+
+		case 1:
+			cout << "Speed on Mars for " << time << " seconds is: ";
+			break;
+
+		case 2:
+			cout << "Speed on Venus for " << time << " seconds is: ";
+			break;
+
+		case 3:
+			cout << "Speed on Earth for " << time << " seconds is: ";
+			break;
+
+		case 4:
+			cout << "Speed on Uranus for " << time << " seconds is: ";
+			break;
+
+		case 5:
+			cout << "Speed on Saturn for " << time << " seconds is: ";
+			break;
+
+		case 6:
+			cout << "Speed on Neptume for " << time << " seconds is: ";
+			break;
+
+		case 7:
+			cout << "Speed on Jupiter for " << time << " seconds is: ";
+
 		}
-		else {
-			cout << "S = " << fixed << setprecision(2) << s << "m" << endl;
-		}
+		speed = arr[i] * time;
+		cout << fixed << setprecision(2) << arr[i] * time << "m/s" << endl;
 	}
+
+	cout << endl;
+	cout << setfill('-') << setw(60) << " " << endl;
+	cout << endl;
+	
 }
 
 //Create function for menu
