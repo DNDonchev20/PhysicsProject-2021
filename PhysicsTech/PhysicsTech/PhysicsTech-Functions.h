@@ -32,3 +32,5 @@ void Ânter“heÃass();
 void forceOfArchimedes();
 
 void printMenuForShapes();
+
+void PrintLogo();

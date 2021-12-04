@@ -4,7 +4,6 @@
 #include <cstring>
 #include <conio.h>
 #include "../PhysicsTech/PhysicsTech-Functions.h"
-#include "PhysicsTech.h"
 
 using namespace std;
 

@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <cstring>
 #include <conio.h>
+#include "../PhysicsTech/PhysicsTech-Functions.h"
 
 using namespace std;
 
@@ -202,21 +203,28 @@ void secondPrincipleOfMechanicsCheck()
 	Ânter“heÃass();
 
 	float F = 0;
-	if (mHolder < 0.07)
+	
+	while (mHolder >= 0.07)
 	{
+		system("CLS");
+
+		PrintLogo();
+		printMenu();
+
+		cout << endl;
+		cout << "Distance from the starting position of the trolley to the restrictive plates: " << distance << endl;
+		cout << endl;
+
 		cout << "The holder is too heavy to replace it with another" << endl;
 		cout << "Try again" << endl;
 
 		Ânter“heÃass();
-	}
-	else
-	{
-		cout << "Strength of gravity is equal to the: ";
-		F = mHolder * 10;	// g = 10
+	} 
 
-		cout << F << endl;
-	}
+	cout << "Strength of gravity is equal to the: ";
+	F = mHolder * 10;	// g = 10
 
+	cout << F << endl;
 
 	int count = 3;
 	float* times = readTimes(count);
@@ -231,17 +239,21 @@ void secondPrincipleOfMechanicsCheck()
 
 	float M = CalculateMass(F, acceleration);
 
-	if (M >= 1)
+	while (M >= 1)
 	{
+		system("CLS");
+
+		PrintLogo();
+		printMenu();
+
 		cout << "It's too heavy a body. Change it to a lighter one." << endl;
 
 		secondPrincipleOfMechanicsCheck();
 		cout << endl;
 	}
-	else
-	{
-		cout << "The F/a ratio is: " << M << endl;
-	}
+
+	cout << "The F/a ratio is: " << M << endl;
+
 
 }
 
