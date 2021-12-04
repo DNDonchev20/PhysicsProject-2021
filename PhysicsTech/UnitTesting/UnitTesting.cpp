@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../PhysicsTech/PhysicsTech-Functions.h"
+#include "../PhysicsTech/PhysicsTech-Functions.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -21,7 +21,7 @@ namespace UnitTesting
 			Assert::AreEqual(result, expected, L"Expected 3!");
 		}
 
-		TEST_METHOD(TestCalculateMassFunction)
+		TEST_METHOD(TestCalculateMassFunctionTwo)
 		{
 			float result;
 			float expected;
@@ -32,7 +32,7 @@ namespace UnitTesting
 			Assert::AreEqual(result, expected, L"Expected 2!");
 		}
 
-		TEST_METHOD(TestCalculateMassFunction)
+		TEST_METHOD(TestCalculateMassFunctionThree)
 		{
 			float result;
 			float expected;
@@ -54,7 +54,7 @@ namespace UnitTesting
 			Assert::AreEqual(result, expected, L"Expected 4!");
 		}
 
-		TEST_METHOD(TestCalculateAccelerationFunction)
+		TEST_METHOD(TestCalculateAccelerationFunctionTwo)
 		{
 			float result;
 			float expected;
@@ -65,7 +65,7 @@ namespace UnitTesting
 			Assert::AreEqual(result, expected, L"Expected 2!");
 		}
 
-		TEST_METHOD(TestCalculateAccelerationFunction)
+		TEST_METHOD(TestCalculateAccelerationFunctionThree)
 		{
 			float result;
 			float expected;
@@ -86,7 +86,7 @@ namespace UnitTesting
 
 			Assert::AreEqual(result, expected, L"Expected 58,875!");
 		}
-		TEST_METHOD(TestCalculateVolumeFunction)
+		TEST_METHOD(TestCalculateVolumeFunctionTwo)
 		{
 			float result;
 			float expected;
@@ -96,7 +96,7 @@ namespace UnitTesting
 
 			Assert::AreEqual(result, expected, L"Expected 157!");
 		}
-		TEST_METHOD(TestCalculateVolumeFunction)
+		TEST_METHOD(TestCalculateVolumeFunctionThree)
 		{
 			float result;
 			float expected;

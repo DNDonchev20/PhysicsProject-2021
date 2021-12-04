@@ -26,5 +26,8 @@
     <ClInclude Include="PhysicsTech-Functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PhysicsTech.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

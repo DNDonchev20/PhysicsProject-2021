@@ -184,7 +184,12 @@ void ånterÒheÌass()
 	cout << "Total mass of the trolley: ";
 	cin >> mTrolley;
 	cout << endl;
+
+	cout << "Total mass is: ";
+	float AllM = mHolder + mTrolley;
+	cout << AllM << endl;
 }
+
 //declarating new function  about the second princip of the mechanics
 void secondPrincipleOfMechanicsCheck()
 {
@@ -195,10 +200,6 @@ void secondPrincipleOfMechanicsCheck()
 	cout << endl;
 
 	ånterÒheÌass();
-
-	cout << "Total mass is: ";
-	float AllM = mHolder + mTrolley;
-	cout << AllM << endl;
 
 	float F = 0;
 	if (mHolder < 0.07)
@@ -230,7 +231,7 @@ void secondPrincipleOfMechanicsCheck()
 
 	float M = CalculateMass(F, acceleration);
 
-	if (M > 1)
+	if (M >= 1)
 	{
 		cout << "It's too heavy a body. Change it to a lighter one." << endl;
 
@@ -243,6 +244,7 @@ void secondPrincipleOfMechanicsCheck()
 	}
 
 }
+
 //declarating new function  about the distance between the planets
 void equilibriumMovementAtInclinedPlane()
 {
@@ -339,5 +341,16 @@ void printMenu()
 	cout << setfill('-') << setw(70) << " " << endl;
 }
 
-
+//Team logo
+void PrintLogo()
+{
+	
+	cout << "    ____  __               _              ______          __  " << endl;
+	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
+	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
+	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
+	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
+	cout << "            /____/                                            " << endl;
+	cout << endl;
+}
 

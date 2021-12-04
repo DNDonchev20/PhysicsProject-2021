@@ -1,2 +1,8 @@
-﻿  PhysicsTech.cpp
-  PhysicsTech.vcxproj -> C:\Users\Teacher\Documents\GitHub\PhysicsProject-2021\PhysicsTech\x64\Debug\PhysicsTech.exe
+﻿  PhysicsTech-Functions.cpp
+H:\GitHub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(18,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+H:\GitHub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(52,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+H:\GitHub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(280,69): warning C4305: 'initializing': truncation from 'double' to 'float'
+  PhysicsTech.cpp
+  Generating Code...
+H:\GitHub\PhysicsProject-2021\PhysicsTech\PhysicsTech\PhysicsTech-Functions.cpp(58): warning C4715: 'enterTheShapes': not all control paths return a value
+  PhysicsTech.vcxproj -> H:\GitHub\PhysicsProject-2021\PhysicsTech\x64\Debug\PhysicsTech.exe
