@@ -394,53 +394,7 @@ void accelerationsOfPlanets()
 	cout << "Text which write down is for distance(s) on different planets: " << endl;
 	cout << endl;
 
-	for (int i = 0; i < 8; i++)
-	{
-		switch (i)
-		{
-		case 0:
-			cout << "Distance on Mercury for " << time << " seconds is: ";
-			break;
-
-		case 1:
-			cout << "Distance on Mars for " << time << " seconds is: ";
-			break;
-
-		case 2:
-			cout << "Distance on Venus for " << time << " seconds is: ";
-			break;
-
-		case 3:
-			cout << "Distance on Earth for " << time << " seconds is: ";
-			break;
-
-		case 4:
-			cout << "Distance on Uranus for " << time << " seconds is: ";
-			break;
-
-		case 5:
-			cout << "Distance on Saturn for " << time << " seconds is: ";
-			break;
-
-		case 6:
-			cout << "Distance on Neptume for " << time << " seconds is: ";
-			break;
-
-		case 7:
-			cout << "Distance on Jupiter for " << time << " seconds is: ";
-
-		}
-
-		s = (arr[i] * time * time) / 2;
-		if (s >= 1000)
-		{
-			s /= 1000;
-			cout << fixed << setprecision(2) << s << "km" << endl;
-		}
-		else {
-			cout << fixed << setprecision(2) << s << "m" << endl;
-		}
-	}
+	
 
 	cout << endl;
 	cout << setfill('-') << setw(60) << " " << endl;
