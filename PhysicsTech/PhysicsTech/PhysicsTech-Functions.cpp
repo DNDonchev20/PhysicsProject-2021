@@ -7,23 +7,8 @@
 
 using namespace std;
 
-//Team logo
-void PrintLogo()
-{
-
-	cout << "    ____  __               _              ______          __  " << endl;
-	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
-	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
-	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
-	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
-	cout << "            /____/                                            " << endl;
-	cout << endl;
-}
-
-
-
 //Consider the volume of the collapse
-float calculateVolume(float radius, int heightFlask)
+float CalculateVolume(float radius, int heightFlask)
 {
 	return 3.14f * radius * radius * heightFlask;
 }
@@ -47,7 +32,7 @@ float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, floa
 	}
 	else if (shapeSelector == "2")
 	{
-		cout << "Enter the radius of sphere";
+		cout << "Enter the radius of sphere: ";
 		cin >> radiusShapes;
 		cout << endl;
 
@@ -84,7 +69,95 @@ void printMenuForShapes()
 }
 
 
+void PushingPower(float  densitOfLiquids[4], float volumeShape)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		switch (i)
+		{
+		case 0:
+			cout << "The pushing power in gasoline is: ";
+			break;
 
+		case 1:
+			cout << "The pushing power in alcohol is: ";
+			break;
+
+		case 2:
+			cout << "The pushing power in oil is: ";
+			break;
+
+		case 3:
+			cout << "The pushing power in water is: ";
+			break;
+		}
+
+		float PushingPower = densitOfLiquids[i] * volumeShape * 10;
+		cout << PushingPower << "N" << endl;
+	}
+}
+
+void forceOfArchimedes()
+{
+	//V = pow(a, 3) - cube
+	//V = 4 / 3 * 3.14 * pow(r, 3) - sphere
+	//V = 3.14 * pow(r, 2) * h - cylinder
+
+
+	//Radius of the flask = 4.5 cm and height = 14 cm(these are data of a sample flask)
+	float radius = 4.5;
+	int heightFlask = 14;
+
+	float theVolumeOfTheFlask = CalculateVolume(radius, heightFlask);
+	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
+
+	//given the in poured water
+	float volumeOfWater;
+
+	float heightOfWater;
+
+	cout << "The height of the poured water in the flask is: ";
+
+	cin >> heightOfWater;
+
+
+	volumeOfWater = 3.14f * radius * radius * heightOfWater;
+
+	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
+
+	/*if (volumeOfWater > volumeOfWater)
+	{
+
+	}*/
+
+	printMenuForShapes();
+
+	string shapeSelector;
+
+	cin >> shapeSelector;
+
+	float radiusShapes = 0, aCube = 0;
+	float volumeShape = 0;
+	float heightCylinder = 0;
+
+	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+	cout << "cm3" << endl;
+	cout << endl;
+
+	float densitOfLiquids[4] = { 720, 780, 900, 1000 };//	kg/m3	
+	cout << setfill('-') << setw(70) << " " << endl;;
+	cout << endl;
+
+	/*if (volumeShape + volumeOfWater > theVolumeOfTheFlask)
+	{
+
+	}*/
+
+	PushingPower(densitOfLiquids, volumeShape);
+
+	cout << endl;
+	cout << setfill('-') << setw(70) << " " << endl;
+}
 
 //Find the average of the three times
 //declarating new function for calculation
@@ -101,13 +174,13 @@ float calculateTimeAverage(float times[], int count) {
 
 //Find the acceleration according to the formula
 //declarating new function for calculation
-float calculateAcceleration(float distance, float timeAverage)
+float CalculateAcceleration(float distance, float timeAverage)
 {
 	return (2 * distance) / (timeAverage * timeAverage);
 }
 
 //declarating new function for calculation
-float calculateMass(float F, float acceleration)
+float CalculateMass(float F, float acceleration)
 {
 	return F / acceleration;
 }
@@ -213,10 +286,10 @@ void secondPrincipleOfMechanicsCheck()
 	cout << "Average time: " << timeAverage << endl;
 
 	//Find the acceleration according to the formula
-	float acceleration = calculateAcceleration(distance, timeAverage);
+	float acceleration = CalculateAcceleration(distance, timeAverage);
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 
-	float M = calculateMass(F, acceleration);
+	float M = CalculateMass(F, acceleration);
 
 	while (M >= 1)
 	{
@@ -235,10 +308,10 @@ void secondPrincipleOfMechanicsCheck()
 		cout << "Average time: " << timeAverage << endl;
 
 		//Find the acceleration according to the formula
-		float acceleration = calculateAcceleration(distance, timeAverage);
+		float acceleration = CalculateAcceleration(distance, timeAverage);
 		cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 
-		M = calculateMass(F, acceleration);
+		M = CalculateMass(F, acceleration);
 		cout << endl;
 	}
 
@@ -247,7 +320,31 @@ void secondPrincipleOfMechanicsCheck()
 
 }
 
+void ånterÒheÌass()
+{
+}
 
+//declarating new function  about the distance between the planets
+void equilibriumMovementAtInclinedPlane()
+{
+	float distance;
+
+	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
+	cin >> distance;
+	cout << endl;
+
+	int count = 3;
+	float* times = readTimes(count);
+
+
+	float timeAverage = calculateTimeAverage(times, 3);
+
+	cout << "Average time: " << timeAverage << endl;
+
+	float  acceleration = CalculateAcceleration(distance, timeAverage);
+
+	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
+}
 
 
 //declarating new function  about the distance between the planets + calculation
@@ -316,7 +413,7 @@ void accelerationsOfPlanets()
 		case 6:
 			cout << "Neptume = ";
 			break;
-			
+
 		case 7:
 			cout << "Jupiter = ";
 
@@ -334,11 +431,10 @@ void accelerationsOfPlanets()
 
 	float s;
 
-	cout << endl;
-	cout << setfill('-') << setw(60) << " " << endl;
+	cout << setfill('-') << setw(70) << " " << endl;
 	cout << endl;
 
-	cout << "Text which write down is for distance(s) on different planets: " << endl;
+	cout << "Text which write down is for distance(S) on different planets: " << endl;
 	cout << endl;
 
 	for (int i = 0; i < 8; i++)
@@ -346,42 +442,35 @@ void accelerationsOfPlanets()
 		switch (i)
 		{
 		case 0:
-			cout << "Distance on Mercury for " << time << " seconds is : ";
-
+			cout << "Distance on Mercury for " << time << " seconds is: ";
 			break;
 
 		case 1:
-			cout << "Distance on Mars for " << time << " seconds is : ";
-
+			cout << "Distance on Mars for " << time << " seconds is: ";
 			break;
 
 		case 2:
-			cout << "Distance on Venus for " << time << " seconds is : ";
-
+			cout << "Distance on Venus for " << time << " seconds is: ";
 			break;
 
 		case 3:
-			cout << "Distance on Earth for " << time << " seconds is : ";
-
+			cout << "Distance on Earth for " << time << " seconds is: ";
 			break;
 
 		case 4:
-			cout << "Distance on Uranus for " << time << " seconds is : ";
-
+			cout << "Distance on Uranus for " << time << " seconds is: ";
 			break;
 
 		case 5:
-			cout << "Distance on Saturn for " << time << " seconds is : ";
-
+			cout << "Distance on Saturn for " << time << " seconds is: ";
 			break;
 
 		case 6:
-			cout << "Distance on Neptume for " << time << " seconds is : ";
-
+			cout << "Distance on Neptume for " << time << " seconds is: ";
 			break;
 
 		case 7:
-			cout << "Distance on Jupiter for " << time << " seconds is : ";
+			cout << "Distance on Jupiter for " << time << " seconds is: ";
 
 		}
 
@@ -391,19 +480,18 @@ void accelerationsOfPlanets()
 			s /= 1000;
 			cout << fixed << setprecision(2) << s << "km" << endl;
 		}
-		else 
-		{
+		else {
 			cout << fixed << setprecision(2) << s << "m" << endl;
 		}
 	}
 
 	cout << endl;
-	cout << setfill('-') << setw(60) << " " << endl;
+	cout << setfill('-') << setw(70) << " " << endl;
 	cout << endl;
 
 	int speed;
-	
-	cout << "Text which is write down is for speed(v) on different planets: " << endl;
+
+	cout << "Text which is write down is for speed(V) on different planets: " << endl;
 	cout << endl;
 
 	for (int i = 0; i < 8; i++)
@@ -447,85 +535,10 @@ void accelerationsOfPlanets()
 	}
 
 	cout << endl;
-	cout << setfill('-') << setw(60) << " " << endl;
-	cout << endl;
-	
-}
-
-
-//declarating new function  about the distance between the planets
-void equilibriumMovementAtInclinedPlane()
-{
-	float distance;
-
-	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
-	cin >> distance;
+	cout << setfill('-') << setw(70) << " " << endl;
 	cout << endl;
 
-	int count = 3;
-	float* times = readTimes(count);
-
-
-	float timeAverage = calculateTimeAverage(times, 3);
-
-	cout << "Average time: " << timeAverage << endl;
-
-	float  acceleration = calculateAcceleration(distance, timeAverage);
-
-	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 }
-
-//declarating new function 
-void forceOfArchimedes()
-{
-	//V = pow(a, 3) - cube
-	//V = 4 / 3 * 3.14 * pow(r, 3) - sphere
-	//V = 3.14 * pow(r, 2) * h - cylinder
-
-
-	//Radius of the flask = 4.5 cm and height = 14 cm(these are data of a sample flask)
-	float radius = 4.5;
-	int heightFlask = 14;
-
-	float theVolumeOfTheFlask = calculateVolume(radius, heightFlask);
-	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
-
-	//given the in poured water
-	float volumeOfWater;
-
-	float heightOfWater;
-
-	cout << "The height of the poured water in the flask is: ";
-
-	cin >> heightOfWater;
-
-
-	volumeOfWater = 3.14f * radius * radius * heightOfWater;
-
-	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
-
-	printMenuForShapes();
-
-	string shapeSelector;
-
-	cin >> shapeSelector;
-
-	float radiusShapes = 0, aCube = 0;
-	float volumeShape = 0;
-	float heightCylinder = 0;
-
-	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
-
-
-	/*float densitOfLiquids;
-
-	make if else for different liquids
-
-	float Fa = densitOfLiquids * volumeShape * 10;
-	cout << Fa;*/
-
-}
-
 
 //Create function for menu
 void printMenu()
@@ -536,3 +549,15 @@ void printMenu()
 	cout << setfill('-') << setw(70) << " " << endl;
 }
 
+//Team logo
+void PrintLogo()
+{
+
+	cout << "    ____  __               _              ______          __  " << endl;
+	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
+	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
+	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
+	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
+	cout << "            /____/                                            " << endl;
+	cout << endl;
+}
