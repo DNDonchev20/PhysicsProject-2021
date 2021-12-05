@@ -17,6 +17,8 @@ You can choose from 4 different options:
 [Click here to download the Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/dndonchev20_codingburgas_bg/EV3ZqOtbTVlAhSyQrCzLwbsBEZpRuuzNEviLwdGwlGioWQ?e=R3MUSy)
 ##
 [Click here to download the test plan](https://codingburgas-my.sharepoint.com/:w:/g/personal/dndonchev20_codingburgas_bg/ETNbbmJTBPhDpBMIXK3twnIBnYB03fBlcyugNnJiUO7v3w?e=SU4BA0)
+##
+[Click here to download the excel table](https://codingburgas-my.sharepoint.com/:x:/g/personal/dndonchev20_codingburgas_bg/EasezolwrjtAgYoisGSCcX4BMN2msr3V51S4knZKGwdqRA?e=XQbmOr)
 ---
  
  ## Team    <a name = "team">PhysicsTech</a>
