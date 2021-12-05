@@ -69,55 +69,7 @@ void printMenuForShapes()
 }
 
 
-void forceOfArchimedes()
-{
-	//V = pow(a, 3) - cube
-	//V = 4 / 3 * 3.14 * pow(r, 3) - sphere
-	//V = 3.14 * pow(r, 2) * h - cylinder
 
-
-	//Radius of the flask = 4.5 cm and height = 14 cm(these are data of a sample flask)
-	float radius = 4.5;
-	int heightFlask = 14;
-
-	float theVolumeOfTheFlask = calculateVolume(radius, heightFlask);
-	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
-
-	//given the in poured water
-	float volumeOfWater;
-
-	float heightOfWater;
-
-	cout << "The height of the poured water in the flask is: ";
-
-	cin >> heightOfWater;
-
-
-	volumeOfWater = 3.14f * radius * radius * heightOfWater;
-
-	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
-
-	printMenuForShapes();
-
-	string shapeSelector;
-
-	cin >> shapeSelector;
-
-	float radiusShapes = 0, aCube = 0;
-	float volumeShape = 0;
-	float heightCylinder = 0;
-
-	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
-
-
-	/*float densitOfLiquids;
-
-	make if else for different liquids
-
-	float Fa = densitOfLiquids * volumeShape * 10;
-	cout << Fa;*/
-
-}
 
 //Find the average of the three times
 //declarating new function for calculation
@@ -280,27 +232,7 @@ void secondPrincipleOfMechanicsCheck()
 
 }
 
-//declarating new function  about the distance between the planets
-void equilibriumMovementAtInclinedPlane()
-{
-	float distance;
 
-	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
-	cin >> distance;
-	cout << endl;
-
-	int count = 3;
-	float* times = readTimes(count);
-
-
-	float timeAverage = calculateTimeAverage(times, 3);
-
-	cout << "Average time: " << timeAverage << endl;
-
-	float  acceleration = calculateAcceleration(distance, timeAverage);
-
-	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
-}
 
 
 //declarating new function  about the distance between the planets + calculation
@@ -504,6 +436,81 @@ void accelerationsOfPlanets()
 	cout << endl;
 	
 }
+
+
+//declarating new function  about the distance between the planets
+void equilibriumMovementAtInclinedPlane()
+{
+	float distance;
+
+	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
+	cin >> distance;
+	cout << endl;
+
+	int count = 3;
+	float* times = readTimes(count);
+
+
+	float timeAverage = calculateTimeAverage(times, 3);
+
+	cout << "Average time: " << timeAverage << endl;
+
+	float  acceleration = calculateAcceleration(distance, timeAverage);
+
+	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
+}
+
+//declarating new function 
+void forceOfArchimedes()
+{
+	//V = pow(a, 3) - cube
+	//V = 4 / 3 * 3.14 * pow(r, 3) - sphere
+	//V = 3.14 * pow(r, 2) * h - cylinder
+
+
+	//Radius of the flask = 4.5 cm and height = 14 cm(these are data of a sample flask)
+	float radius = 4.5;
+	int heightFlask = 14;
+
+	float theVolumeOfTheFlask = calculateVolume(radius, heightFlask);
+	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
+
+	//given the in poured water
+	float volumeOfWater;
+
+	float heightOfWater;
+
+	cout << "The height of the poured water in the flask is: ";
+
+	cin >> heightOfWater;
+
+
+	volumeOfWater = 3.14f * radius * radius * heightOfWater;
+
+	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
+
+	printMenuForShapes();
+
+	string shapeSelector;
+
+	cin >> shapeSelector;
+
+	float radiusShapes = 0, aCube = 0;
+	float volumeShape = 0;
+	float heightCylinder = 0;
+
+	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+
+
+	/*float densitOfLiquids;
+
+	make if else for different liquids
+
+	float Fa = densitOfLiquids * volumeShape * 10;
+	cout << Fa;*/
+
+}
+
 
 //Create function for menu
 void printMenu()
