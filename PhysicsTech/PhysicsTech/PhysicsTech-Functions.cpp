@@ -8,7 +8,7 @@
 using namespace std;
 
 //Consider the volume of the collapse
-float CalculateVolume(float radius, int heightFlask)
+float calculateVolume(float radius, int heightFlask)
 {
 	return 3.14f * radius * radius * heightFlask;
 }
@@ -108,7 +108,7 @@ void forceOfArchimedes()
 	float radius = 4.5;
 	int heightFlask = 14;
 
-	float theVolumeOfTheFlask = CalculateVolume(radius, heightFlask);
+	float theVolumeOfTheFlask = calculateVolume(radius, heightFlask);
 	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
 
 	//given the in poured water
@@ -174,13 +174,13 @@ float calculateTimeAverage(float times[], int count) {
 
 //Find the acceleration according to the formula
 //declarating new function for calculation
-float CalculateAcceleration(float distance, float timeAverage)
+float calculateAcceleration(float distance, float timeAverage)
 {
 	return (2 * distance) / (timeAverage * timeAverage);
 }
 
 //declarating new function for calculation
-float CalculateMass(float F, float acceleration)
+float calculateMass(float F, float acceleration)
 {
 	return F / acceleration;
 }
@@ -286,10 +286,10 @@ void secondPrincipleOfMechanicsCheck()
 	cout << "Average time: " << timeAverage << endl;
 
 	//Find the acceleration according to the formula
-	float acceleration = CalculateAcceleration(distance, timeAverage);
+	float acceleration = calculateAcceleration(distance, timeAverage);
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 
-	float M = CalculateMass(F, acceleration);
+	float M = calculateMass(F, acceleration);
 
 	while (M >= 1)
 	{
@@ -308,10 +308,10 @@ void secondPrincipleOfMechanicsCheck()
 		cout << "Average time: " << timeAverage << endl;
 
 		//Find the acceleration according to the formula
-		float acceleration = CalculateAcceleration(distance, timeAverage);
+		float acceleration = calculateAcceleration(distance, timeAverage);
 		cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 
-		M = CalculateMass(F, acceleration);
+		M = calculateMass(F, acceleration);
 		cout << endl;
 	}
 
@@ -341,7 +341,7 @@ void equilibriumMovementAtInclinedPlane()
 
 	cout << "Average time: " << timeAverage << endl;
 
-	float  acceleration = CalculateAcceleration(distance, timeAverage);
+	float  acceleration = calculateAcceleration(distance, timeAverage);
 
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 }
