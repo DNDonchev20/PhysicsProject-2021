@@ -14,7 +14,7 @@ You can choose from 4 different options:
 4. Force of Archimedes
 ---------------------------------------------- --------------------------------------
 ##
-Link for the project presentation : https://codingburgas-my.sharepoint.com/:p:/g/personal/dndonchev20_codingburgas_bg/EV3ZqOtbTVlAhSyQrCzLwbsBEZpRuuzNEviLwdGwlGioWQ?e=R3MUSy
+[Click here to download Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/dndonchev20_codingburgas_bg/EV3ZqOtbTVlAhSyQrCzLwbsBEZpRuuzNEviLwdGwlGioWQ?e=R3MUSy)
 ##
 ---
  
