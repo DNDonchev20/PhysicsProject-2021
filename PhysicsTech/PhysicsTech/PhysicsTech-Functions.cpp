@@ -10,7 +10,7 @@ using namespace std;
 //Consider the volume of the collapse
 float calculateVolume(float radius, int heightFlask)
 {
-	return 3.14f * radius * radius * heightFlask;
+	return 3.14f * pow(radius, 2) * heightFlask;
 }
 
 //choose what shape the body is (only the ideal cases are taken) - cube, sphere, cylinder
@@ -71,6 +71,7 @@ void printMenuForShapes()
 
 void PushingPower(float  densitOfLiquids[4], float volumeShape)
 {
+	volumeShape /= 1000000;
 	for (int i = 0; i < 4; i++)
 	{
 		switch (i)
@@ -140,7 +141,9 @@ void forceOfArchimedes()
 	float volumeShape = 0;
 	float heightCylinder = 0;
 
-	cout << enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+	volumeShape = enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+
+	cout << volumeShape;
 	cout << "cm3" << endl;
 	cout << endl;
 
@@ -161,15 +164,15 @@ void forceOfArchimedes()
 
 //Find the average of the three times
 //declarating new function for calculation
-float calculateTimeAverage(float times[], int count) {
+float calculateTimeAverage(float times[]) {
 	float timeSum = 0;
 
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		timeSum += times[i];
 	}
 
-	return timeSum / count;
+	return timeSum / 3;
 }
 
 //Find the acceleration according to the formula
@@ -187,11 +190,11 @@ float calculateMass(float F, float acceleration)
 
 //Enter the times (which are three for accuracy)
 //declarating new function for calculation
-float* readTimes(int count)
+float* readTimes()
 {
-	float* times = new float[count];
+	float* times = new float[3];
 
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		switch (i)
 		{
@@ -260,6 +263,8 @@ void EnterTheMass()
 	cout << AllM << endl;
 }
 
+
+
 //declarating new function  about the second princip of the mechanics
 void secondPrincipleOfMechanicsCheck()
 {
@@ -278,10 +283,8 @@ void secondPrincipleOfMechanicsCheck()
 
 	cout << F << endl;
 
-	int count = 3;
-	float* times = readTimes(count);
-
-	float timeAverage = calculateTimeAverage(times, 3);
+	float* times = readTimes();
+	float timeAverage = calculateTimeAverage(times);
 
 	cout << "Average time: " << timeAverage << endl;
 
@@ -301,9 +304,8 @@ void secondPrincipleOfMechanicsCheck()
 		cout << "It's too heavy a body. Change it to a lighter one." << endl;
 
 		OutputUntilTimes();
-		times = readTimes(count);
 
-		float timeAverage = calculateTimeAverage(times, 3);
+		float timeAverage = calculateTimeAverage(times);
 
 		cout << "Average time: " << timeAverage << endl;
 
@@ -317,11 +319,10 @@ void secondPrincipleOfMechanicsCheck()
 
 	cout << "The F/a ratio is: " << M << endl;
 
-
-}
-
-void ånterÒheÌass()
-{
+	for (int i = 0; i < 3; i++)
+	{
+		delete& times[i];
+	}
 }
 
 //declarating new function  about the distance between the planets
@@ -333,17 +334,20 @@ void equilibriumMovementAtInclinedPlane()
 	cin >> distance;
 	cout << endl;
 
-	int count = 3;
-	float* times = readTimes(count);
+	float* times = readTimes();
 
-
-	float timeAverage = calculateTimeAverage(times, 3);
+	float timeAverage = calculateTimeAverage(times);
 
 	cout << "Average time: " << timeAverage << endl;
 
 	float  acceleration = calculateAcceleration(distance, timeAverage);
 
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
+
+	for (int i = 0; i < 3; i++)
+	{
+		delete& times[i];
+	}
 }
 
 

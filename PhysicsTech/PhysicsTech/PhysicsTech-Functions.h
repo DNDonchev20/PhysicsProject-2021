@@ -9,13 +9,13 @@ using namespace std;
 
 float calculateVolume(float radius, int heightFlask);
 
-float* readTimes(int count);
+float* readTimes();
 
 void printMenu();
 
 float enterTheShapes(string shapeSelector, float radiusShapes, float aCube, float volumeShape, float heightCylinder);
 
-float calculateTimeAverage(float times[], int count);
+float calculateTimeAverage(float times[]);
 
 float calculateAcceleration(float distance, float timeAverage);
 

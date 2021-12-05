@@ -7,12 +7,9 @@
 
 using namespace std;
 
-
-
 int main()
 {
 	system("color 1f");
-	
 
 	PrintLogo();
 
@@ -20,12 +17,12 @@ int main()
 	printMenu();
 	string choice;
 	cin >> choice;
-	
+
 	do {
 		if (choice == "1")
 		{
 			secondPrincipleOfMechanicsCheck();
-			
+
 		}
 		else if (choice == "2") {
 			accelerationsOfPlanets();
@@ -39,8 +36,8 @@ int main()
 			forceOfArchimedes();
 		}
 		cout << endl;
-		system("PAUSE"); 
-		system("CLS"); 
+		system("PAUSE");
+		system("CLS");
 		PrintLogo();
 		printMenu();
 		cin >> choice;
