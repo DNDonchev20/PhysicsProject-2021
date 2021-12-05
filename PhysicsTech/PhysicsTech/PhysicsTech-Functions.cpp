@@ -7,6 +7,21 @@
 
 using namespace std;
 
+//Team logo
+void PrintLogo()
+{
+
+	cout << "    ____  __               _              ______          __  " << endl;
+	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
+	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
+	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
+	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
+	cout << "            /____/                                            " << endl;
+	cout << endl;
+}
+
+
+
 //Consider the volume of the collapse
 float calculateVolume(float radius, int heightFlask)
 {
@@ -521,15 +536,3 @@ void printMenu()
 	cout << setfill('-') << setw(70) << " " << endl;
 }
 
-//Team logo
-void PrintLogo()
-{
-
-	cout << "    ____  __               _              ______          __  " << endl;
-	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
-	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
-	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
-	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
-	cout << "            /____/                                            " << endl;
-	cout << endl;
-}
