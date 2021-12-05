@@ -75,7 +75,7 @@ namespace UnitTesting
 
 			Assert::AreEqual(result, expected, L"Expected 1!");
 		}
-
+		
 		TEST_METHOD(TestCalculateVolumeFunction)
 		{
 			float result;
@@ -101,10 +101,20 @@ namespace UnitTesting
 			float result;
 			float expected;
 
-			result = calculateVolume(5, 4);
-			expected = 3.14f * 5 * 5 * 4;
+			result = calculateVolume(10, 4);
+			expected = 3.14f * 10 * 10 * 4;
 
-			Assert::AreEqual(result, expected, L"Expected 314!");
+			Assert::AreEqual(result, expected, L"Expected 1256!");
+		}
+		TEST_METHOD(TestCalculateVolumeFunction)
+		{
+			float result;
+			float expected;
+
+			result = calculateVolume(2.5, 3);
+			expected = 3.14f * 2.5 * 2.5 * 3;
+
+			Assert::AreEqual(result, expected, L"Expected 58,875!");
 		}
 	};
 }
