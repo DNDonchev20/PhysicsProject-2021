@@ -22,7 +22,7 @@ You can choose from 4 different options:
 4. Simeon Redanski - [SERedanski20](https://github.com/SERedanski20)
 ---------------------------------------------- --------------------------------------
 ###
-[Click here to see all the documentation](https://codingburgas-my.sharepoint.com/:f:/g/personal/dndonchev20_codingburgas_bg/El8dQYXMetRNhbgfuBthRAoBAMnc8nX6P7lmR640jr8AqA?e=taaxkd)
+[Click here to see all the documentation](https://codingburgas-my.sharepoint.com/:f:/g/personal/dndonchev20_codingburgas_bg/El8dQYXMetRNhbgfuBthRAoBAMnc8nX6P7lmR640jr8AqA?e=7hKUQ2)
 
 
  ---
