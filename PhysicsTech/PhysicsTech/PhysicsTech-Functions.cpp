@@ -132,8 +132,8 @@ void forceOfArchimedes()
 	float radius = 4.5;
 	int heightFlask = 14;
 
-	float theVolumeOfTheFlask = calculateVolume(radius, heightFlask);
-	cout << "The volume of the flask is: " << theVolumeOfTheFlask << "cm3" << endl;
+	float volumeFlask = calculateVolume(radius, heightFlask);
+	cout << "The volume of the flask is: " << volumeFlask << "cm3" << endl;
 
 	//given the in poured water
 	float volumeOfWater;
@@ -149,12 +149,12 @@ void forceOfArchimedes()
 
 	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
 
-	if (volumeOfWater > theVolumeOfTheFlask)
+	if (volumeOfWater > volumeFlask)
 	{
 		system("CLS");
 		PrintLogo();
 		printMenu();
-		cout << "Try again" << endl;
+		cout << "The flask overflowed. Try again!" << endl;
 		forceOfArchimedes();
 	}
 	else
@@ -180,17 +180,25 @@ void forceOfArchimedes()
 		cout << "cm3" << endl;
 		cout << endl;
 
-		float densitOfLiquids[4] = { 720, 780, 900, 1000 };//kg/m3	
-		cout << setfill('-') << setw(70) << " " << endl;
-		cout << endl;
+		if(volumeShape + volumeOfWater > volumeFlask)
+		{
+			system("CLS");
+			PrintLogo();
+			printMenu();
+			cout << "The flask overflowed. Try again!" << endl;
+			forceOfArchimedes();
+		}
+		else {
+			float densitOfLiquids[4] = { 720, 780, 900, 1000 };//kg/m3	
+			cout << setfill('-') << setw(70) << " " << endl;
+			cout << endl;
 
-		PushingPower(densitOfLiquids, volumeShape);
+			PushingPower(densitOfLiquids, volumeShape);
 
-		cout << endl;
-		cout << setfill('-') << setw(70) << " " << endl;
+			cout << endl;
+			cout << setfill('-') << setw(70) << " " << endl;
+		}
 	}
-
-
 }
 
 //Find the average of the three times
