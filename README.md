@@ -38,4 +38,4 @@ You can choose from 4 different options:
 
 ---
 
-# 🎉 And do not forget, do not use it to cheat on the tests! (Or at least try not to get caught)
+# 🎉 And do not forget, do not use it to cheat on  tests! (Or at least try not to get caught)
