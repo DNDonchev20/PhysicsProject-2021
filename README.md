@@ -12,20 +12,18 @@ You can choose from 4 different options:
 2. Acceleration of planets
 3. Equilibrium movement at inclined plane
 4. Force of Archimedes
+
 ---------------------------------------------- --------------------------------------
-##
-[Click here to download the Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/dndonchev20_codingburgas_bg/EV3ZqOtbTVlAhSyQrCzLwbsBEZpRuuzNEviLwdGwlGioWQ?e=R3MUSy)
-##
-[Click here to download the test plan](https://codingburgas-my.sharepoint.com/:w:/g/personal/dndonchev20_codingburgas_bg/ETNbbmJTBPhDpBMIXK3twnIBnYB03fBlcyugNnJiUO7v3w?e=SU4BA0)
-##
-[Click here to download the excel table](https://codingburgas-my.sharepoint.com/:x:/g/personal/dndonchev20_codingburgas_bg/EasezolwrjtAgYoisGSCcX4BMN2msr3V51S4knZKGwdqRA?e=XQbmOr)
----
  
  ## Team    <a name = "team">PhysicsTech</a>
 1. Alexander Peev -  [ADPeev20](https://github.com/ADPeev20)
 2. Trani Tranev -  [TSTranev20](https://github.com/TSTranev20)
 3. David Donchev -  [DNDonchev20](https://github.com/DNDonchev20)
 4. Simeon Redanski - [SERedanski20](https://github.com/SERedanski20)
+---------------------------------------------- --------------------------------------
+###
+[Click here to see all the documentation](https://codingburgas-my.sharepoint.com/:f:/g/personal/dndonchev20_codingburgas_bg/El8dQYXMetRNhbgfuBthRAoBAMnc8nX6P7lmR640jr8AqA?e=7hKUQ2)
+
 
  ---
 
@@ -40,4 +38,4 @@ You can choose from 4 different options:
 
 ---
 
-# 🎉 And do not forget, do not use it to cheat on the tests! (Or at least try not to get caught)
+# 🎉 And do not forget, do not use it to cheat on  tests! (Or at least try not to get caught)
