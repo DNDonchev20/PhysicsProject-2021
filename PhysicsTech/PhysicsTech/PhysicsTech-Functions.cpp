@@ -261,11 +261,13 @@ void OutputUntilHolder() {
 	system("CLS");
 	PrintLogo();
 	printMenu();
+
 	cout << "Distance from the starting position of the trolley to the restrictive plates: ";
 	cout << endl;
 }
 
-void OutputUntilTimes() {
+void OutputUntilTimes() 
+{
 	OutputUntilHolder();
 	cout << "Total mass of the holder: ";
 	cout << mHolder << endl;
@@ -290,7 +292,9 @@ void EnterTheMass()
 		cout << "The holder is too heavy to replace it with another" << endl;
 		cout << "Try again" << endl;
 
+		cout << "The mass of the holder is: ";
 		cin >> mHolder;
+		cout << endl;
 	}
 
 	cout << "Total mass of the trolley: ";
