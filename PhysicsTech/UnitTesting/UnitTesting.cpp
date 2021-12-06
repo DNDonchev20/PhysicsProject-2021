@@ -108,7 +108,7 @@ namespace UnitTesting
 			Assert::AreEqual(result, expected, L"Expected 890.19!");
 		}
 
-		TEST_METHOD(TestCalculateVolumeFunction)
+		TEST_METHOD(TestCalculateVolumeFunctionFour)
 		{
 			float result;
 			float expected;

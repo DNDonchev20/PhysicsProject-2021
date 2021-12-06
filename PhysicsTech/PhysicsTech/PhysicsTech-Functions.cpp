@@ -10,10 +10,10 @@ using namespace std;
 //Create function for menu
 void printMenu()
 {
-	cout << setfill('-') << setw(70) << " " << endl;
-	cout << "1. Second principle of mechanics	2. Acceleration of planets" << endl;
-	cout << "3. Sloping plane			4. Force of Archimedes" << endl;
-	cout << setfill('-') << setw(70) << " " << endl;
+	cout << setfill('-') << setw(80) << " " << endl;
+	cout << "1. Second principle of mechanics		2. Acceleration of planets" << endl;
+	cout << "3. Equilibrium movement at unclined plane	4. Force of Archimedes" << endl;
+	cout << setfill('-') << setw(80) << " " << endl;
 }
 
 //Team logo
@@ -190,13 +190,13 @@ void forceOfArchimedes()
 		}
 		else {
 			float densitOfLiquids[4] = { 720, 780, 900, 1000 };//kg/m3	
-			cout << setfill('-') << setw(70) << " " << endl;
+			cout << setfill('-') << setw(80) << " " << endl;
 			cout << endl;
 
 			PushingPower(densitOfLiquids, volumeShape);
 
 			cout << endl;
-			cout << setfill('-') << setw(70) << " " << endl;
+			cout << setfill('-') << setw(80) << " " << endl;
 		}
 	}
 }
@@ -476,7 +476,7 @@ void accelerationsOfPlanets()
 
 	float s;
 
-	cout << setfill('-') << setw(70) << " " << endl;
+	cout << setfill('-') << setw(80) << " " << endl;
 	cout << endl;
 
 	cout << "Text which write down is for distance(S) on different planets: " << endl;
@@ -531,7 +531,7 @@ void accelerationsOfPlanets()
 	}
 
 	cout << endl;
-	cout << setfill('-') << setw(70) << " " << endl;
+	cout << setfill('-') << setw(80) << " " << endl;
 	cout << endl;
 
 	int speed;
@@ -580,7 +580,7 @@ void accelerationsOfPlanets()
 	}
 
 	cout << endl;
-	cout << setfill('-') << setw(70) << " " << endl;
+	cout << setfill('-') << setw(80) << " " << endl;
 	cout << endl;
 
 }
