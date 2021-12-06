@@ -3,9 +3,32 @@
 #include <iomanip>
 #include <cstring>
 #include <conio.h>
-#include "../PhysicsTech/PhysicsTech-Functions.h"
+
 
 using namespace std;
+
+//Create function for menu
+void printMenu()
+{
+	cout << setfill('-') << setw(70) << " " << endl;
+	cout << "1. Second principle of mechanics	2. Acceleration of planets" << endl;
+	cout << "3. Sloping plane			4. Force of Archimedes" << endl;
+	cout << setfill('-') << setw(70) << " " << endl;
+}
+
+//Team logo
+void PrintLogo()
+{
+
+	cout << "    ____  __               _              ______          __  " << endl;
+	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
+	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
+	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
+	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
+	cout << "            /____/                                            " << endl;
+	cout << endl;
+}
+
 
 //Consider the volume of the collapse
 float calculateVolume(float radius, int heightFlask)
@@ -126,40 +149,48 @@ void forceOfArchimedes()
 
 	cout << "The volume of the poured water in the flask is:  " << volumeOfWater << "cm3" << endl;
 
-	/*if (volumeOfWater > volumeOfWater)
+	if (volumeOfWater > theVolumeOfTheFlask)
 	{
-
-	}*/
-
-	printMenuForShapes();
-
-	string shapeSelector;
-
-	cin >> shapeSelector;
-
-	float radiusShapes = 0, aCube = 0;
-	float volumeShape = 0;
-	float heightCylinder = 0;
-
-	volumeShape = enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
-
-	cout << volumeShape;
-	cout << "cm3" << endl;
-	cout << endl;
-
-	float densitOfLiquids[4] = { 720, 780, 900, 1000 };//	kg/m3	
-	cout << setfill('-') << setw(70) << " " << endl;;
-	cout << endl;
-
-	/*if (volumeShape + volumeOfWater > theVolumeOfTheFlask)
+		system("CLS");
+		PrintLogo();
+		printMenu();
+		cout << "Try again" << endl;
+		forceOfArchimedes();
+	}
+	else
 	{
+		printMenuForShapes();
 
-	}*/
+		string shapeSelector;
 
-	PushingPower(densitOfLiquids, volumeShape);
+		cin >> shapeSelector;
+		while (shapeSelector != "1" && shapeSelector != "2" && shapeSelector != "3")
+		{
+			cout << "Invalid shape selected. Please choose a shape 1-3" << endl;
+			cin >> shapeSelector;
+		}
 
-	cout << endl;
-	cout << setfill('-') << setw(70) << " " << endl;
+		float radiusShapes = 0, aCube = 0;
+		float volumeShape = 0;
+		float heightCylinder = 0;
+
+		volumeShape = enterTheShapes(shapeSelector, radiusShapes, aCube, volumeShape, heightCylinder);
+
+		cout << volumeShape;
+		cout << "cm3" << endl;
+		cout << endl;
+
+		float densitOfLiquids[4] = { 720, 780, 900, 1000 };//kg/m3	
+		cout << setfill('-') << setw(70) << " " << endl;
+		cout << endl;
+
+		PushingPower(densitOfLiquids, volumeShape);
+
+		cout << endl;
+		cout << setfill('-') << setw(70) << " " << endl;
+	}
+
+
 }
 
 //Find the average of the three times
@@ -301,9 +332,11 @@ void secondPrincipleOfMechanicsCheck()
 		PrintLogo();
 		printMenu();
 
+		OutputUntilTimes();
+
 		cout << "It's too heavy a body. Change it to a lighter one." << endl;
 
-		OutputUntilTimes();
+		times = readTimes();
 
 		float timeAverage = calculateTimeAverage(times);
 
@@ -344,10 +377,6 @@ void equilibriumMovementAtInclinedPlane()
 
 	cout << fixed << setprecision(2) << "Accleration is: " << acceleration << endl;
 
-	for (int i = 0; i < 3; i++)
-	{
-		delete& times[i];
-	}
 }
 
 
@@ -386,8 +415,12 @@ void accelerationsOfPlanets()
 		6. Saturn = 11.08
 		7. Neptume = 14.07*/
 
+	cout << "        ~+ \n								\n                 *       +\n           '                  |\n       ()    .-.,=""=.    - o - \n             '=/_       \     |\n          *   |  '=._    |\n               \     `=./`,        '\n            .   '=.__.=' `='      *\n   +                         +\n        O      *        '       ." << endl;
+
 	for (int i = 0; i < 8; i++)
 	{
+		cout << setfill(' ') << setw(12) << " ";
+
 		switch (i)
 		{
 		case 0:
@@ -544,24 +577,4 @@ void accelerationsOfPlanets()
 
 }
 
-//Create function for menu
-void printMenu()
-{
-	cout << setfill('-') << setw(70) << " " << endl;
-	cout << "1. Second principle of mechanics	2. Acceleration of planets" << endl;
-	cout << "3. Sloping plane			4. Force of Archimedes" << endl;
-	cout << setfill('-') << setw(70) << " " << endl;
-}
 
-//Team logo
-void PrintLogo()
-{
-
-	cout << "    ____  __               _              ______          __  " << endl;
-	cout << "   / __ \\/ /_  __  _______(_)_________   /_  __/__  _____/ /_" << endl;
-	cout << "  / /_/ / __ \\/ / / / ___/ / ___/ ___/    / / / _ \\/ ___/ __ \\" << endl;
-	cout << " / ____/ / / / /_/ (__  ) / /__(__  )    / / /  __/ /__/ / / /" << endl;
-	cout << "/_/   /_/ /_/\\__, /____/_/\\___/____/    /_/  \\___/\\___/_/ /_/ " << endl;
-	cout << "            /____/                                            " << endl;
-	cout << endl;
-}
