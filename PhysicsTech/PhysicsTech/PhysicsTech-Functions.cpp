@@ -180,7 +180,7 @@ void forceOfArchimedes()
 		cout << "cm3" << endl;
 		cout << endl;
 
-		if(volumeShape + volumeOfWater > volumeFlask)
+		if (volumeShape + volumeOfWater > volumeFlask)
 		{
 			system("CLS");
 			PrintLogo();
@@ -266,7 +266,7 @@ void OutputUntilHolder() {
 	cout << endl;
 }
 
-void OutputUntilTimes() 
+void OutputUntilTimes()
 {
 	OutputUntilHolder();
 	cout << "Total mass of the holder: ";
