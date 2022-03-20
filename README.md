@@ -22,8 +22,8 @@ You can choose between 4 different options:
 4. Simeon Redanski - [SERedanski20](https://github.com/SERedanski20)
 ---------------------------------------------- --------------------------------------
 ###
-[Click here to see all the documentation](https://codingburgas-my.sharepoint.com/:f:/g/personal/dndonchev20_codingburgas_bg/El8dQYXMetRNhbgfuBthRAoBAMnc8nX6P7lmR640jr8AqA?e=7hKUQ2)
-
+[Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/seredanski20_codingburgas_bg/EZnTEkl8odZOsOYdqX-G-xMBC4aei9oYKQDA4yadqs0Lkw?e=WhvrKg)
+[Presentation](https://prezi.com/view/9qKpumGJ0s6qhh4PxdAe/)
 
  ---
 
